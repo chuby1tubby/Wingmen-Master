@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		BF08D3691DA5B035006110EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08D3681DA5B035006110EA /* AppDelegate.swift */; };
-		BF08D36B1DA5B035006110EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08D36A1DA5B035006110EA /* ViewController.swift */; };
+		BF08D36B1DA5B035006110EA /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08D36A1DA5B035006110EA /* SearchVC.swift */; };
 		BF08D36E1DA5B035006110EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF08D36C1DA5B035006110EA /* Main.storyboard */; };
 		BF08D3701DA5B035006110EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF08D36F1DA5B035006110EA /* Assets.xcassets */; };
 		BF08D3731DA5B035006110EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF08D3711DA5B035006110EA /* LaunchScreen.storyboard */; };
 		BF08D37E1DA5B036006110EA /* WingMenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08D37D1DA5B036006110EA /* WingMenTests.swift */; };
 		BF08D3891DA5B036006110EA /* WingMenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08D3881DA5B036006110EA /* WingMenUITests.swift */; };
+		BFC876F31DAB609300B35E3B /* SearchSelectedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC876F21DAB609300B35E3B /* SearchSelectedVC.swift */; };
+		BFC876F51DAB770B00B35E3B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC876F41DAB770B00B35E3B /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		BF08D3651DA5B035006110EA /* WingMen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WingMen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF08D3681DA5B035006110EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF08D36A1DA5B035006110EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF08D36A1DA5B035006110EA /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		BF08D36D1DA5B035006110EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF08D36F1DA5B035006110EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF08D3721DA5B035006110EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		BF08D3841DA5B036006110EA /* WingMenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WingMenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF08D3881DA5B036006110EA /* WingMenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WingMenUITests.swift; sourceTree = "<group>"; };
 		BF08D38A1DA5B036006110EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC876F21DAB609300B35E3B /* SearchSelectedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSelectedVC.swift; sourceTree = "<group>"; };
+		BFC876F41DAB770B00B35E3B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,13 @@
 		BF08D3671DA5B035006110EA /* WingMen */ = {
 			isa = PBXGroup;
 			children = (
-				BF08D3681DA5B035006110EA /* AppDelegate.swift */,
-				BF08D36A1DA5B035006110EA /* ViewController.swift */,
+				BFC876F11DAB600F00B35E3B /* Utilities */,
+				BFC876EF1DAB5FFF00B35E3B /* Model */,
+				BFC876F01DAB600800B35E3B /* View */,
+				BFC876EE1DAB5FF500B35E3B /* Controller */,
 				BF08D36C1DA5B035006110EA /* Main.storyboard */,
 				BF08D36F1DA5B035006110EA /* Assets.xcassets */,
 				BF08D3711DA5B035006110EA /* LaunchScreen.storyboard */,
-				BF08D3741DA5B035006110EA /* Info.plist */,
 			);
 			path = WingMen;
 			sourceTree = "<group>";
@@ -123,6 +128,39 @@
 				BF08D38A1DA5B036006110EA /* Info.plist */,
 			);
 			path = WingMenUITests;
+			sourceTree = "<group>";
+		};
+		BFC876EE1DAB5FF500B35E3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF08D36A1DA5B035006110EA /* SearchVC.swift */,
+				BFC876F21DAB609300B35E3B /* SearchSelectedVC.swift */,
+				BFC876F41DAB770B00B35E3B /* LoginVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		BFC876EF1DAB5FFF00B35E3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BFC876F01DAB600800B35E3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BFC876F11DAB600F00B35E3B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BF08D3741DA5B035006110EA /* Info.plist */,
+				BF08D3681DA5B035006110EA /* AppDelegate.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +300,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF08D36B1DA5B035006110EA /* ViewController.swift in Sources */,
+				BFC876F31DAB609300B35E3B /* SearchSelectedVC.swift in Sources */,
+				BF08D36B1DA5B035006110EA /* SearchVC.swift in Sources */,
+				BFC876F51DAB770B00B35E3B /* LoginVC.swift in Sources */,
 				BF08D3691DA5B035006110EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +554,7 @@
 				BF08D38F1DA5B036006110EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF08D3901DA5B036006110EA /* Build configuration list for PBXNativeTarget "WingMenTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +563,7 @@
 				BF08D3921DA5B036006110EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF08D3931DA5B036006110EA /* Build configuration list for PBXNativeTarget "WingMenUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +572,7 @@
 				BF08D3951DA5B036006110EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
