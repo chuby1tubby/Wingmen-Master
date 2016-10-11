@@ -11,15 +11,16 @@ import UIKit
 class ProfileCell: UITableViewCell {
     
     // Outlets
-    @IBOutlet weak var profileImg: UIImageView!
-    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var mainImg: UIImageView!
+    @IBOutlet weak var mainLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
     }
     
     func configureCell(_ image: UIImage, text: String) {
-        profileImg.image = image
-        userName.text = text
+        mainImg.image = image
+        mainLbl.text = text
     }
 }
