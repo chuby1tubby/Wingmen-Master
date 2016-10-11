@@ -14,6 +14,7 @@
 		BF08D3731DA5B035006110EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF08D3711DA5B035006110EA /* LaunchScreen.storyboard */; };
 		BF08D37E1DA5B036006110EA /* WingMenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08D37D1DA5B036006110EA /* WingMenTests.swift */; };
 		BF08D3891DA5B036006110EA /* WingMenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08D3881DA5B036006110EA /* WingMenUITests.swift */; };
+		BF56B7B81DAD614500EC50B1 /* SocialMediaLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56B7B71DAD614500EC50B1 /* SocialMediaLoginVC.swift */; };
 		BF7BF02D1DACAE3B0041624B /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */; };
 		BFC876F31DAB609300B35E3B /* ProfilesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC876F21DAB609300B35E3B /* ProfilesListVC.swift */; };
 		BFC876F51DAB770B00B35E3B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC876F41DAB770B00B35E3B /* LoginVC.swift */; };
@@ -52,6 +53,7 @@
 		BF08D3841DA5B036006110EA /* WingMenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WingMenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF08D3881DA5B036006110EA /* WingMenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WingMenUITests.swift; sourceTree = "<group>"; };
 		BF08D38A1DA5B036006110EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF56B7B71DAD614500EC50B1 /* SocialMediaLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaLoginVC.swift; sourceTree = "<group>"; };
 		BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		BFC876F21DAB609300B35E3B /* ProfilesListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesListVC.swift; sourceTree = "<group>"; };
 		BFC876F41DAB770B00B35E3B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				BFC876F41DAB770B00B35E3B /* LoginVC.swift */,
+				BF56B7B71DAD614500EC50B1 /* SocialMediaLoginVC.swift */,
 				BF08D36A1DA5B035006110EA /* SearchVC.swift */,
 				BFC876F21DAB609300B35E3B /* ProfilesListVC.swift */,
 				BFE1FC751DAC5E0500472219 /* UserProfileVC.swift */,
@@ -314,6 +317,7 @@
 				BFC876F31DAB609300B35E3B /* ProfilesListVC.swift in Sources */,
 				BF08D36B1DA5B035006110EA /* SearchVC.swift in Sources */,
 				BFC876F51DAB770B00B35E3B /* LoginVC.swift in Sources */,
+				BF56B7B81DAD614500EC50B1 /* SocialMediaLoginVC.swift in Sources */,
 				BF08D3691DA5B035006110EA /* AppDelegate.swift in Sources */,
 				BFE1FC761DAC5E0500472219 /* UserProfileVC.swift in Sources */,
 			);

@@ -15,4 +15,19 @@ class LoginVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func facebookRecognizer(_ sender: AnyObject) {
+        socialMediaSelection = "Facebook Login Screen"
+        performSegue(withIdentifier: "mediaSegue", sender: self)
+    }
+    
+    @IBAction func twitterRecognizer(_ sender: AnyObject) {
+        socialMediaSelection = "Twitter Login Screen"
+        performSegue(withIdentifier: "mediaSegue", sender: self)
+    }
+    
+    @IBAction func googleRecognizer(_ sender: AnyObject) {
+        socialMediaSelection = "Google Login Screen"
+        performSegue(withIdentifier: "mediaSegue", sender: self)
+    }
 }

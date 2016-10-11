@@ -20,6 +20,12 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     var location: String!
     var rating: String!
     
+    var imagesArray = [#imageLiteral(resourceName: "kyleImage"), #imageLiteral(resourceName: "kamaImage"), #imageLiteral(resourceName: "calebImage"), #imageLiteral(resourceName: "eudyImage"), #imageLiteral(resourceName: "baugnImage")]
+    var namesArray = ["Kyle Nakamura", "Christian Kama", "Caleb Linden", "Walker Eudy", "Collin Baughn"]
+    var jobsArray = ["Photographer", "Personal Trainer", "Graphic Designer", "Military Combat", "Military Training"]
+    var locationsArray = ["Azusa, CA", "Azusa, CA", "Azusa, CA", "S. Korea", "S. Korea"]
+    var ratingsArray = ["9.9", "8.3", "8.7", "8.2", "8.8"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -29,11 +35,12 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     // Table view functions
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserProfileCell") as? ProfileCell {
-            img = #imageLiteral(resourceName: "profileImage")
-            name = "Kyle Nakamura"
-            job = "Photographer"
-            location = "Azusa, CA"
-            rating = "9.1"
+            img = imagesArray[indexPath.row]
+            name = namesArray[indexPath.row]
+            job = jobsArray[indexPath.row]
+            location = locationsArray[indexPath.row]
+            rating = ratingsArray[indexPath.row]
+            
             cell.configureCell(img, nameTxt: name, jobTxt: job, locationTxt: location, ratingTxt: rating)
             return cell
         } else {

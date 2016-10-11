@@ -1,15 +1,21 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
       "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-20x20@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "Icon-Spotlight.png",
+      "filename" : "Icon-App-20x20@3x.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "29x29",
+      "scale" : "1x"
     },
     {
       "idiom" : "iphone",
@@ -19,7 +25,7 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "Icon-Settings@3x.png",
+      "filename" : "Icon-App-29x29@3x.png",
       "scale" : "3x"
     },
     {
@@ -28,25 +34,36 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "iphone",
       "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-40x40@3x.png",
       "scale" : "3x"
     },
     {
-      "size" : "60x60",
+      "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "Icon-Spotlight-1.png",
+      "filename" : "Icon-App-57x57@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "57x57",
       "scale" : "2x"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Icon-App@3x.png",
+      "size" : "60x60",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "60x60",
       "scale" : "3x"
     },
     {
+      "size" : "20x20",
       "idiom" : "ipad",
-      "size" : "20x20",
+      "filename" : "Icon-App-20x20@1x.png",
       "scale" : "1x"
     },
     {
@@ -57,7 +74,7 @@
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "Icon-Settings.png",
+      "filename" : "Icon-App-29x29@1x.png",
       "scale" : "1x"
     },
     {
@@ -66,8 +83,9 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "ipad",
       "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-40x40@1x.png",
       "scale" : "1x"
     },
     {
@@ -78,30 +96,31 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "Icon-App-iPad.png",
+      "filename" : "Icon-App-76x76@1x.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "Icon-App-iPad@2x.png",
+      "filename" : "Icon-App-76x76@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "Icon-App-iPad-Pro.png",
+      "filename" : "Icon-App-83.5x83.5@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "car",
-      "filename" : "Icon-App@2x.png",
+      "filename" : "Icon-App-60x60@2x.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "car",
       "size" : "60x60",
+      "idiom" : "car",
+      "filename" : "Icon-App-60x60@3x.png",
       "scale" : "3x"
     },
     {
@@ -121,7 +140,7 @@
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "Icon-Settings@2x.png",
+      "filename" : "Icon-App-29x29@2x.png",
       "role" : "companionSettings",
       "scale" : "2x"
     },
@@ -134,7 +153,7 @@
     {
       "size" : "40x40",
       "idiom" : "watch",
-      "filename" : "Icon-Spotlight-iPhone-4-5.png",
+      "filename" : "Icon-App-40x40@2x.png",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "38mm"
@@ -194,102 +213,21 @@
       "scale" : "2x"
     },
     {
-      "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "iTunesArtwork.png",
-      "scale" : "1x"
-    },
-    {
       "size" : "512x512",
+      "scale" : "1x"
+    },
+    {
       "idiom" : "mac",
-      "filename" : "iTunesArtwork@2x.png",
+      "size" : "512x512",
       "scale" : "2x"
     },
     {
-      "size" : "60x60",
-      "idiom" : "iphone",
-      "filename" : "Icon-Spotlight@3x.png",
-      "unassigned" : true,
-      "scale" : "3x"
-    },
-    {
-      "size" : "60x60",
-      "idiom" : "iphone",
-      "filename" : "Icon-Web-App@3x.png",
-      "unassigned" : true,
-      "scale" : "3x"
-    },
-    {
-      "size" : "76x76",
-      "idiom" : "ipad",
-      "filename" : "Icon-App.png",
-      "unassigned" : true,
-      "scale" : "1x"
-    },
-    {
-      "size" : "76x76",
-      "idiom" : "ipad",
-      "filename" : "Icon-Web-App-iPad.png",
-      "unassigned" : true,
-      "scale" : "1x"
-    },
-    {
-      "size" : "76x76",
-      "idiom" : "ipad",
-      "filename" : "Icon-Web-App.png",
-      "unassigned" : true,
-      "scale" : "1x"
-    },
-    {
-      "size" : "76x76",
-      "idiom" : "ipad",
-      "filename" : "Icon-Web-App-iPad@2x.png",
-      "unassigned" : true,
-      "scale" : "2x"
-    },
-    {
-      "size" : "60x60",
-      "idiom" : "car",
-      "filename" : "Icon-Spotlight-iPhone-6.png",
-      "unassigned" : true,
-      "scale" : "2x"
-    },
-    {
-      "size" : "60x60",
-      "idiom" : "car",
-      "filename" : "Icon-Spotlight@2x.png",
-      "unassigned" : true,
-      "scale" : "2x"
-    },
-    {
-      "size" : "60x60",
-      "idiom" : "car",
-      "filename" : "Icon-Web-App@2x.png",
-      "unassigned" : true,
-      "scale" : "2x"
-    },
-    {
-      "filename" : "Icon-Tab-Bar.png",
+      "filename" : "Icon-App-60x60@1x.png",
       "unassigned" : true
     },
     {
-      "filename" : "Icon-Tab-Bar@2x.png",
-      "unassigned" : true
-    },
-    {
-      "filename" : "Icon-Tab-Bar@3x.png",
-      "unassigned" : true
-    },
-    {
-      "filename" : "Icon-Toolbar.png",
-      "unassigned" : true
-    },
-    {
-      "filename" : "Icon-Toolbar@2x.png",
-      "unassigned" : true
-    },
-    {
-      "filename" : "Icon-Toolbar@3x.png",
+      "filename" : "Icon-App-76x76@3x.png",
       "unassigned" : true
     }
   ],
