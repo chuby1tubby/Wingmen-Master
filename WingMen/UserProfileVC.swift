@@ -1,5 +1,5 @@
 //
-//  LoginVC.swift
+//  UserProfileVC.swift
 //  WingMen
 //
 //  Created by Kyle Nakamura on 10/10/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class UserProfileVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
