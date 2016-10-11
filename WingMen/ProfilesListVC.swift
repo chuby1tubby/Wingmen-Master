@@ -15,7 +15,10 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // Variables
     var img: UIImage!
-    var txt: String!
+    var name: String!
+    var job: String!
+    var location: String!
+    var rating: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +30,11 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserProfileCell") as? ProfileCell {
             img = #imageLiteral(resourceName: "profileImage")
-            txt = "Kyle Nakamura"
-            cell.configureCell(img, text: txt)
+            name = "Kyle Nakamura"
+            job = "Photographer"
+            location = "Azusa, CA"
+            rating = "9.1"
+            cell.configureCell(img, nameTxt: name, jobTxt: job, locationTxt: location, ratingTxt: rating)
             return cell
         } else {
             return ProfileCell()
