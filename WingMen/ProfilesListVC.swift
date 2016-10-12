@@ -8,6 +8,10 @@
 
 import UIKit
 
+var userChoice: String!
+var userImg: UIImage!
+var userJob: String!
+
 class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // Outlets
@@ -33,6 +37,11 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     // Table view functions
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        userChoice = namesArray[indexPath.row]
+        userImg = imagesArray[indexPath.row]
+        performSegue(withIdentifier: "profileSegue", sender: self)
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserProfileCell") as? ProfileCell {
             
@@ -56,6 +65,8 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
             default:
                 job = "Error"
             }
+            
+            userJob = job
             
             cell.configureCell(img, nameTxt: name, jobTxt: job, locationTxt: location, ratingTxt: rating)
             return cell

@@ -17,6 +17,7 @@
 		BF1AC5D81DAD69C500B199BC /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AC5D71DAD69C500B199BC /* CategoryCell.swift */; };
 		BF56B7B81DAD614500EC50B1 /* SocialMediaLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56B7B71DAD614500EC50B1 /* SocialMediaLoginVC.swift */; };
 		BF7BF02D1DACAE3B0041624B /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */; };
+		BFB665341DADC5C40073786C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB665331DADC5C40073786C /* ProfileVC.swift */; };
 		BFC876F31DAB609300B35E3B /* ProfilesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC876F21DAB609300B35E3B /* ProfilesListVC.swift */; };
 		BFC876F51DAB770B00B35E3B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC876F41DAB770B00B35E3B /* LoginVC.swift */; };
 		BFE1FC741DAC5DA300472219 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE1FC731DAC5DA300472219 /* AccountVC.swift */; };
@@ -58,6 +59,7 @@
 		BF1AC5D71DAD69C500B199BC /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		BF56B7B71DAD614500EC50B1 /* SocialMediaLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaLoginVC.swift; sourceTree = "<group>"; };
 		BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		BFB665331DADC5C40073786C /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		BFC876F21DAB609300B35E3B /* ProfilesListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesListVC.swift; sourceTree = "<group>"; };
 		BFC876F41DAB770B00B35E3B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BFE1FC731DAC5DA300472219 /* AccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				BF56B7B71DAD614500EC50B1 /* SocialMediaLoginVC.swift */,
 				BF08D36A1DA5B035006110EA /* SearchVC.swift */,
 				BFC876F21DAB609300B35E3B /* ProfilesListVC.swift */,
+				BFB665331DADC5C40073786C /* ProfileVC.swift */,
 				BFE1FC751DAC5E0500472219 /* MapVC.swift */,
 				BFE1FC731DAC5DA300472219 /* AccountVC.swift */,
 			);
@@ -327,6 +330,7 @@
 				BF1AC5D81DAD69C500B199BC /* CategoryCell.swift in Sources */,
 				BF56B7B81DAD614500EC50B1 /* SocialMediaLoginVC.swift in Sources */,
 				BF08D3691DA5B035006110EA /* AppDelegate.swift in Sources */,
+				BFB665341DADC5C40073786C /* ProfileVC.swift in Sources */,
 				BFE1FC761DAC5E0500472219 /* MapVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
