@@ -20,7 +20,7 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var job: String!
     
     var imagesArray = [#imageLiteral(resourceName: "kyleImage"), #imageLiteral(resourceName: "kamaImage"), #imageLiteral(resourceName: "calebImage"), #imageLiteral(resourceName: "eudyImage"), #imageLiteral(resourceName: "baugnImage")]
-    var jobsArray = ["Photraphers", "Personal Trainers", "Graphic Designers", "Military Combatants", "Military Trainers"]
+    var jobsArray = ["Photographers", "Personal Trainers", "Graphic Designers", "Military Combatants", "Military Trainers"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
