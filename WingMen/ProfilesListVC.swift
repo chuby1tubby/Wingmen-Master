@@ -24,11 +24,21 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     var location: String!
     var rating: String!
     
-    var imagesArray = [#imageLiteral(resourceName: "kyleImage"), #imageLiteral(resourceName: "kamaImage"), #imageLiteral(resourceName: "calebImage"), #imageLiteral(resourceName: "eudyImage"), #imageLiteral(resourceName: "baugnImage")]
-    var namesArray = ["Kyle Nakamura", "Christian Kama", "Caleb Linden", "Walker Eudy", "Collin Baughn"]
+    var imagesArray = [UIImage]()
+    
+    var namesArray = ["Kyle Nakamura",      "Christian Kama",   "Caleb Linden",     "Walker Eudy",      "Collin Baughn",
+                      "Jeremy Clarkson",    "John Whitmire",    "Nathaniel Graham", "Carlos Manzano",   "Mario Fibonacci",
+                      "Deanna Johnson",     "Kaylee Northrup",  "Sarah Montgomery", "Ashlee Reed",      "Katelyn Kadmin",
+                      "Noah Garcias",       "Danny Phantom",    "E.J. Delacruz",    "Caleb Danielson",  "Bruce Wayne",
+                      "Keegan Rusinek",     "Errol Kama",       "Maddie Martin",    "Dashon Martin",    "Donald Drumpf"]
+    
     var jobsArray = ["Photographer", "Personal Trainer", "Graphic Designer", "Military Combatant", "Military Training"]
-    var locationsArray = ["Azusa, CA", "Azusa, CA", "Azusa, CA", "S. Korea", "S. Korea"]
-    var ratingsArray = ["9.9", "8.3", "8.7", "8.2", "8.8"]
+    //var locationsArray = ["Azusa, CA", "Azusa, CA", "Azusa, CA", "S. Korea", "S. Korea"]
+    var ratingsArray = ["9.9", "8.3", "8.7", "8.2", "8.8",
+                        "9.3", "8.3", "8.7", "9.2", "8.8",
+                        "9.2", "8.3", "8.9", "8.2", "9.8",
+                        "9.0", "8.1", "8.7", "8.2", "8.8",
+                        "9.2", "8.3", "8.7", "8.2", "1.8"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,30 +53,18 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         performSegue(withIdentifier: "profileSegue", sender: self)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        for count in 1...25 {
+            imagesArray.append(UIImage(named: "profile\(count).jpg")!)
+        }
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserProfileCell") as? ProfileCell {
             
             img = imagesArray[indexPath.row]
             name = namesArray[indexPath.row]
             //job = jobsArray[indexPath.row]
-            location = locationsArray[indexPath.row]
+            job = "Wingman"
+            //location = locationsArray[indexPath.row]
+            location = "Azusa, CA"
             rating = ratingsArray[indexPath.row]
-            
-            switch jobCategoryChoice {
-            case "Photographers":
-                job = "Photographer"
-            case "Personal Trainers":
-                job = "Personal Trainer"
-            case "Graphic Designers":
-                job = "Graphic Designer"
-            case "Military Combatants":
-                job = "Military Combatant"
-            case "Military Trainers":
-                job = "Military Trainer"
-            default:
-                job = "Error"
-            }
-            
-            userJob = job
             
             cell.configureCell(img, nameTxt: name, jobTxt: job, locationTxt: location, ratingTxt: rating)
             return cell
@@ -78,7 +76,7 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return namesArray.count
     }
 }
 

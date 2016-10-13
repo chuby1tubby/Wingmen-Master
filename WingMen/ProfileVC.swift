@@ -10,15 +10,10 @@ import UIKit
 
 class ProfileVC: UIViewController {
     
-    @IBOutlet weak var nameTitleLbl: UILabel!
-    @IBOutlet weak var userImage: UIImageView!
-    @IBOutlet weak var userJobLbl: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        nameTitleLbl.text = userChoice
-        userImage.image = userImg
-        userJobLbl.text = userJob
+        scrollView.contentSize.height = 1000
     }
 }

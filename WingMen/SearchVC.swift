@@ -19,8 +19,7 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var img: UIImage!
     var job: String!
     
-    var imagesArray = [#imageLiteral(resourceName: "kyleImage"), #imageLiteral(resourceName: "kamaImage"), #imageLiteral(resourceName: "calebImage"), #imageLiteral(resourceName: "eudyImage"), #imageLiteral(resourceName: "baugnImage")]
-    var jobsArray = ["Photographers", "Personal Trainers", "Graphic Designers", "Military Combatants", "Military Trainers"]
+    var jobsArray = ["Photography", "Personal Training", "Graphic Design", "Military Combat", "Military Training", "Designer", "Nutritionist", "Manual Labor", "Tech Support", "Videography", "Home Maintenance", "Car Cleaning", "Mechanic", "Translation", "Consulting", "Tutoring"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +34,11 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "JobCategoryCell") as? CategoryCell {
-            img = imagesArray[indexPath.row]
+            //img = imagesArray[indexPath.row]
             job = jobsArray[indexPath.row]
             
-            cell.configureCell(img, jobTxt: job)
+            //cell.configureCell(img, jobTxt: job)
+            cell.configureCell(job)
             return cell
         } else {
             return CategoryCell()
@@ -48,6 +48,6 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return jobsArray.count
     }
 }
