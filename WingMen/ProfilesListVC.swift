@@ -8,7 +8,7 @@
 
 import UIKit
 
-var userChoice: String!
+var userName: String!
 var userImg: UIImage!
 var userJob: String!
 
@@ -26,19 +26,16 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var imagesArray = [UIImage]()
     
-    var namesArray = ["Kyle Nakamura",      "Christian Kama",   "Caleb Linden",     "Walker Eudy",      "Collin Baughn",
-                      "Jeremy Clarkson",    "John Whitmire",    "Nathaniel Graham", "Carlos Manzano",   "Mario Fibonacci",
-                      "Deanna Johnson",     "Kaylee Northrup",  "Sarah Montgomery", "Ashlee Reed",      "Katelyn Kadmin",
-                      "Noah Garcias",       "Danny Phantom",    "E.J. Delacruz",    "Caleb Danielson",  "Bruce Wayne",
-                      "Keegan Rusinek",     "Errol Kama",       "Maddie Martin",    "Dashon Martin",    "Donald Drumpf"]
+    var namesArray = ["Katelyn Whitmire", "Kyle Nakamura", "E.J. Walters", "Sarah Montgomery",
+                      "Hilary Clinton", "Lindsey Sterling", "Caleb Lindon", "Courtney Cain",
+                      "Christian Kama", "Jason Martin", "Britney Pears", "Nathan Vandercamp",
+                      "Ricky Navarro", "Eddy Kama", "Matthew Martinez", "Deanna Blaine",
+                      "Jason Stevens", "Walker Eudy", "Colin Baughn"]
     
-    var jobsArray = ["Photographer", "Personal Trainer", "Graphic Designer", "Military Combatant", "Military Training"]
-    //var locationsArray = ["Azusa, CA", "Azusa, CA", "Azusa, CA", "S. Korea", "S. Korea"]
-    var ratingsArray = ["9.9", "8.3", "8.7", "8.2", "8.8",
-                        "9.3", "8.3", "8.7", "9.2", "8.8",
-                        "9.2", "8.3", "8.9", "8.2", "9.8",
-                        "9.0", "8.1", "8.7", "8.2", "8.8",
-                        "9.2", "8.3", "8.7", "8.2", "1.8"]
+    var ratingsArray = ["8.3", "9.9", "8.7", "8.2", "8.8",
+                        "9.3", "8.3", "8.7", "9.0", "8.7",
+                        "9.2", "8.0", "8.9", "8.2", "9.8",
+                        "9.0", "8.1", "8.7", "8.7", "8.2"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,12 +45,12 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // Table view functions
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        userChoice = namesArray[indexPath.row]
+        userName = namesArray[indexPath.row]
         userImg = imagesArray[indexPath.row]
         performSegue(withIdentifier: "profileSegue", sender: self)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        for count in 1...25 {
+        for count in 1...namesArray.count {
             imagesArray.append(UIImage(named: "profile\(count).jpg")!)
         }
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserProfileCell") as? ProfileCell {

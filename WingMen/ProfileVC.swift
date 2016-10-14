@@ -11,9 +11,11 @@ import UIKit
 class ProfileVC: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var userImage: RoundedImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.contentSize.height = 1000
+        userImage.image = userImg
     }
 }
