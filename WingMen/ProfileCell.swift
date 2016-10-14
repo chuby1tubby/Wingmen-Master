@@ -21,11 +21,11 @@ class ProfileCell: UITableViewCell {
         // Initialization code
     }
     
-    func configureCell(_ image: UIImage, nameTxt: String, jobTxt: String, locationTxt: String, ratingTxt: String) {
+    func configureCell(_ image: UIImage, nameTxt: String, jobTxt: String, locationTxt: String, ratingNum: Double) {
         mainImg.image = image
         nameLbl.text = nameTxt
         jobLbl.text = jobTxt
         locationLbl.text = locationTxt
-        ratingLbl.text = ratingTxt
+        ratingLbl.text = "\(ratingNum)"
     }
 }

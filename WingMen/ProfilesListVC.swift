@@ -16,27 +16,7 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // Outlets
     @IBOutlet weak var tableView: UITableView!
-    
-    // Variables
-    var img: UIImage!
-    var name: String!
-    var job: String!
-    var location: String!
-    var rating: String!
-    
-    var imagesArray = [UIImage]()
-    
-    var namesArray = ["Katelyn Whitmire", "Kyle Nakamura", "E.J. Walters", "Sarah Montgomery",
-                      "Hilary Clinton", "Lindsey Sterling", "Caleb Lindon", "Courtney Cain",
-                      "Christian Kama", "Jason Martin", "Britney Pears", "Nathan Vandercamp",
-                      "Ricky Navarro", "Eddy Kama", "Matthew Martinez", "Deanna Blaine",
-                      "Jason Stevens", "Walker Eudy", "Colin Baughn"]
-    
-    var ratingsArray = ["8.3", "9.9", "8.7", "8.2", "8.8",
-                        "9.3", "8.3", "8.7", "9.0", "8.7",
-                        "9.2", "8.0", "8.9", "8.2", "9.8",
-                        "9.0", "8.1", "8.7", "8.7", "8.2"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -45,25 +25,16 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // Table view functions
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        userName = namesArray[indexPath.row]
-        userImg = imagesArray[indexPath.row]
+        userName = wingmenArray[indexPath.row].firstName + wingmenArray[indexPath.row].lastName
+        userImg = wingmenArray[indexPath.row].image
+        userJob = wingmenArray[indexPath.row].job
         performSegue(withIdentifier: "profileSegue", sender: self)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        for count in 1...namesArray.count {
-            imagesArray.append(UIImage(named: "profile\(count).jpg")!)
-        }
+        var currentUser: Wingman!
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserProfileCell") as? ProfileCell {
-            
-            img = imagesArray[indexPath.row]
-            name = namesArray[indexPath.row]
-            //job = jobsArray[indexPath.row]
-            job = "Wingman"
-            //location = locationsArray[indexPath.row]
-            location = "Azusa, CA"
-            rating = ratingsArray[indexPath.row]
-            
-            cell.configureCell(img, nameTxt: name, jobTxt: job, locationTxt: location, ratingTxt: rating)
+            currentUser = wingmenArray[indexPath.row]
+            cell.configureCell(currentUser.image, nameTxt: (currentUser.firstName + " " + currentUser.lastName), jobTxt: currentUser.job, locationTxt: currentUser.location, ratingNum: currentUser.rating)
             return cell
         } else {
             return ProfileCell()
@@ -73,7 +44,7 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return namesArray.count
+        return wingmenArray.count
     }
 }
 
