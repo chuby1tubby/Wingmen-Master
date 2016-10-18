@@ -9,35 +9,68 @@
 import UIKit
 
 var jobCategoryChoice: String!
+var limitedWingmenArray: [Wingman] = [] // Array that stores each wingman with matching job title
 
-class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     // Outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     // Variables
     var img: UIImage!
-    var job: String!
+    var filteredJobs: [String] = []
+    var inSearchMode = false
     
-    var jobsArray = ["Photography", "Personal Training", "Graphic Design", "Military Combat", "Military Training", "Designer", "Nutritionist", "Manual Labor", "Tech Support", "Videography", "Home Maintenance", "Car Cleaning", "Mechanic", "Translation", "Consulting", "Tutoring"]
+    var jobsArray = ["Any Wingman", "Baby Sitter", "Graphic Designer", "Mover", "Photographer", "Tax Accounting", "Tutor"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
+        limitedWingmenArray.removeAll()
+    }
+    
+    // Search bar functions
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            inSearchMode = false
+            tableView.reloadData()
+        } else {
+            inSearchMode = true
+            let lower = searchBar.text?.lowercased()
+            
+            filteredJobs.removeAll()
+            for job in jobsArray {
+                if job.lowercased().contains(lower!) && filteredJobs.contains(job) != true {
+                    filteredJobs.append(job)
+                }
+                
+            }
+            tableView.reloadData()
+        }
     }
     
     // Table view functions
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         jobCategoryChoice = jobsArray[indexPath.row]
+        for man in wingmenArray {
+            if jobCategoryChoice == man.job || jobCategoryChoice == "Any Wingman" {
+                limitedWingmenArray.append(man)
+            }
+        }
         performSegue(withIdentifier: "listSegue", sender: self)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "JobCategoryCell") as? CategoryCell {
-            //img = imagesArray[indexPath.row]
-            job = jobsArray[indexPath.row]
-            
-            //cell.configureCell(img, jobTxt: job)
+            //img = imagesArray[indexPath.row]  // Caleb needs to design new images
+            let job: String!
+            if inSearchMode {
+                job = filteredJobs[indexPath.row]
+            } else {
+                job = jobsArray[indexPath.row]
+            }
             cell.configureCell(job)
             return cell
         } else {
@@ -48,6 +81,10 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return jobsArray.count
+        if inSearchMode {
+            return filteredJobs.count
+        } else {
+            return jobsArray.count
+        }
     }
 }

@@ -11,11 +11,26 @@ import UIKit
 var userName: String!
 var userImg: UIImage!
 var userJob: String!
+var userRating: Double!
+var userLocation: String!
+var userFirstName: String!
+var currentUser: Wingman!
 
 class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // Outlets
     @IBOutlet weak var tableView: UITableView!
+    
+    // Variables
+    var myCount = 0
+    
+    override func viewWillAppear(_ animated: Bool) {
+        for man in wingmenArray {
+            if man.job == jobCategoryChoice || jobCategoryChoice == "Any Wingman" {
+                myCount += 1
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +40,18 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // Table view functions
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        userName = wingmenArray[indexPath.row].firstName + wingmenArray[indexPath.row].lastName
-        userImg = wingmenArray[indexPath.row].image
-        userJob = wingmenArray[indexPath.row].job
+        userName = limitedWingmenArray[indexPath.row].firstName + " " +  limitedWingmenArray[indexPath.row].lastName
+        userFirstName = limitedWingmenArray[indexPath.row].firstName
+        userImg = limitedWingmenArray[indexPath.row].image
+        userJob = limitedWingmenArray[indexPath.row].job
+        userRating = limitedWingmenArray[indexPath.row].rating
+        userLocation = limitedWingmenArray[indexPath.row].location
+
         performSegue(withIdentifier: "profileSegue", sender: self)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var currentUser: Wingman!
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserProfileCell") as? ProfileCell {
-            currentUser = wingmenArray[indexPath.row]
+            currentUser = limitedWingmenArray[indexPath.row]
             cell.configureCell(currentUser.image, nameTxt: (currentUser.firstName + " " + currentUser.lastName), jobTxt: currentUser.job, locationTxt: currentUser.location, ratingNum: currentUser.rating)
             return cell
         } else {
@@ -44,7 +62,7 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return wingmenArray.count
+        return myCount
     }
 }
 
