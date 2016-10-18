@@ -17,6 +17,7 @@ class Wingman {
     fileprivate var _job: String = "Photographer"
     fileprivate var _location: String = "Azusa, CA"
     fileprivate var _rating: Double = 9.9
+    fileprivate var _isOnline: Bool = true
     
     // Getters
     var image: UIImage {
@@ -67,14 +68,23 @@ class Wingman {
             _rating = value
         }
     }
+    var isOnline: Bool {
+        get {
+            return _isOnline
+        }
+        set(value) {
+            _isOnline = value
+        }
+    }
     
     // Initializer
-    init(image: UIImage, firstName: String, lastName: String, job: String, location: String, rating: Double) {
+    init(image: UIImage, firstName: String, lastName: String, job: String, location: String, rating: Double, isOnline: Bool) {
         self._image = image
         self._firstName = firstName
         self._lastName = lastName
         self._job = job
         self._location = location
         self._rating = rating
+        self._isOnline = isOnline
     }
 }

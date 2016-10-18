@@ -29,14 +29,34 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
-        limitedWingmenArray.removeAll()
+        searchBar.returnKeyType = UIReturnKeyType.done
+        // Keyboard observers
+        NotificationCenter.default.addObserver(self, selector: #selector(SearchVC.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SearchVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    // Search bar functions
+    // Keyboard view-moving functions
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
+    
+    // Search bar function
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == "" {
             inSearchMode = false
             tableView.reloadData()
+            view.endEditing(true)
         } else {
             inSearchMode = true
             let lower = searchBar.text?.lowercased()
@@ -51,10 +71,18 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             tableView.reloadData()
         }
     }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
     
     // Table view functions
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        jobCategoryChoice = jobsArray[indexPath.row]
+        if inSearchMode {
+            jobCategoryChoice = filteredJobs[indexPath.row]
+        } else {
+            jobCategoryChoice = jobsArray[indexPath.row]
+        }
+        limitedWingmenArray.removeAll()
         for man in wingmenArray {
             if jobCategoryChoice == man.job || jobCategoryChoice == "Any Wingman" {
                 limitedWingmenArray.append(man)

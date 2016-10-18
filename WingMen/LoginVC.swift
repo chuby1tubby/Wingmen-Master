@@ -54,6 +54,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    
     // Actions
     @IBAction func facebookRecognizer(_ sender: AnyObject) {
         socialMediaSelection = "Facebook Login Screen"
