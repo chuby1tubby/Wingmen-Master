@@ -56,6 +56,15 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     
     // Actions
+    @IBAction func onSignInPressed(_ sender: Any) {
+        if (usernameField.text?.lowercased().contains("wingmenllc"))! {
+            // Do Wingman segue
+            performSegue(withIdentifier: "wingmenSignInSegue", sender: self)
+        } else {
+            // Do Regular segue
+            performSegue(withIdentifier: "regularSignInSegue", sender: self)
+        }
+    }
     @IBAction func facebookRecognizer(_ sender: AnyObject) {
         socialMediaSelection = "Facebook Login Screen"
         performSegue(withIdentifier: "mediaSegue", sender: self)
