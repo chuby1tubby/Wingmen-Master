@@ -8,6 +8,9 @@
 
 import UIKit
 
+// Global Variables
+var isSignedInAsWingman: Bool = false
+
 class LoginVC: UIViewController, UITextFieldDelegate {
     
     // Outlets
@@ -60,9 +63,11 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         if (usernameField.text?.lowercased().contains("wingmenllc"))! {
             // Do Wingman segue
             performSegue(withIdentifier: "wingmenSignInSegue", sender: self)
+            isSignedInAsWingman = true
         } else {
             // Do Regular segue
             performSegue(withIdentifier: "regularSignInSegue", sender: self)
+            isSignedInAsWingman = false
         }
     }
     @IBAction func facebookRecognizer(_ sender: AnyObject) {

@@ -17,6 +17,7 @@
 		BF1AC5D81DAD69C500B199BC /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AC5D71DAD69C500B199BC /* CategoryCell.swift */; };
 		BF45622D1DADF21E00DE7D19 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45622C1DADF21E00DE7D19 /* RoundedImage.swift */; };
 		BF56B7B81DAD614500EC50B1 /* SocialMediaLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56B7B71DAD614500EC50B1 /* SocialMediaLoginVC.swift */; };
+		BF72504C1DB86FD200CDE686 /* RoundedCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72504B1DB86FD200CDE686 /* RoundedCornersView.swift */; };
 		BF7779FF1DB076FF0087EBE8 /* InitializedWingmen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7779FE1DB076FF0087EBE8 /* InitializedWingmen.swift */; };
 		BF7BF02D1DACAE3B0041624B /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */; };
 		BFB1E4781DAF097500A3AB88 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1E4771DAF097500A3AB88 /* CircleImage.swift */; };
@@ -28,6 +29,7 @@
 		BFF2777A1DAD92C400032E28 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF277791DAD92C400032E28 /* Pin.swift */; };
 		BFF446C81DB02C0800E97251 /* UserBioText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF446C71DB02C0800E97251 /* UserBioText.swift */; };
 		BFF446CA1DB02D0700E97251 /* Wingman.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF446C91DB02D0700E97251 /* Wingman.swift */; };
+		BFFFB8231DB86827009D8E17 /* testAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFB8221DB86827009D8E17 /* testAccountVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,7 @@
 		BF1AC5D71DAD69C500B199BC /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		BF45622C1DADF21E00DE7D19 /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		BF56B7B71DAD614500EC50B1 /* SocialMediaLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaLoginVC.swift; sourceTree = "<group>"; };
+		BF72504B1DB86FD200CDE686 /* RoundedCornersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
 		BF7779FE1DB076FF0087EBE8 /* InitializedWingmen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitializedWingmen.swift; sourceTree = "<group>"; };
 		BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		BFB1E4771DAF097500A3AB88 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		BFF277791DAD92C400032E28 /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		BFF446C71DB02C0800E97251 /* UserBioText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBioText.swift; sourceTree = "<group>"; };
 		BFF446C91DB02D0700E97251 /* Wingman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wingman.swift; sourceTree = "<group>"; };
+		BFFFB8221DB86827009D8E17 /* testAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testAccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 				BFB665331DADC5C40073786C /* ProfileVC.swift */,
 				BFE1FC751DAC5E0500472219 /* MapVC.swift */,
 				BFE1FC731DAC5DA300472219 /* AccountVC.swift */,
+				BFFFB8221DB86827009D8E17 /* testAccountVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */,
 				BF45622C1DADF21E00DE7D19 /* RoundedImage.swift */,
 				BFB1E4771DAF097500A3AB88 /* CircleImage.swift */,
+				BF72504B1DB86FD200CDE686 /* RoundedCornersView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -336,10 +342,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFFB8231DB86827009D8E17 /* testAccountVC.swift in Sources */,
 				BF7BF02D1DACAE3B0041624B /* ProfileCell.swift in Sources */,
 				BFE1FC741DAC5DA300472219 /* AccountVC.swift in Sources */,
 				BFC876F31DAB609300B35E3B /* ProfilesListVC.swift in Sources */,
 				BFB1E4781DAF097500A3AB88 /* CircleImage.swift in Sources */,
+				BF72504C1DB86FD200CDE686 /* RoundedCornersView.swift in Sources */,
 				BF08D36B1DA5B035006110EA /* SearchVC.swift in Sources */,
 				BFF2777A1DAD92C400032E28 /* Pin.swift in Sources */,
 				BFC876F51DAB770B00B35E3B /* LoginVC.swift in Sources */,
