@@ -11,7 +11,7 @@ import UIKit
 var jobCategoryChoice: String!
 var limitedWingmenArray: [Wingman] = [] // Array that stores each wingman with matching job title
 
-class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIScrollViewDelegate {
     
     // Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -74,6 +74,9 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
     }
+    
+    
+    
     
     // Table view functions
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
