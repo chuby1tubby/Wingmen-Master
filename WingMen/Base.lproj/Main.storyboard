@@ -931,21 +931,9 @@ I look forward to working with you!</string>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkC-zV-7SO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHd-hv-ZIX" customClass="RoundedCornersView" customModule="WingMen" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="8" width="160" height="44"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="TjY-Pg-Bjg"/>
-                                            <constraint firstAttribute="width" constant="160" id="gCR-ic-cE0"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="lHd-hv-ZIX" firstAttribute="centerX" secondItem="OkC-zV-7SO" secondAttribute="centerX" id="d1T-dw-2mc"/>
                                     <constraint firstAttribute="height" constant="60" id="nP0-73-eYT"/>
-                                    <constraint firstItem="lHd-hv-ZIX" firstAttribute="centerY" secondItem="OkC-zV-7SO" secondAttribute="centerY" id="ttU-jK-kkF"/>
                                 </constraints>
                             </view>
                         </subviews>

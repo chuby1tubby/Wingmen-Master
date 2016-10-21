@@ -25,7 +25,7 @@ var wingmenArray = [Wingman(image: #imageLiteral(resourceName: "profile1"), firs
                     Wingman(image: #imageLiteral(resourceName: "profile14"), firstName: "Donavin", lastName: "Stanely", job: "Photographer", location: "Azusa, CA", rating: 8.1, isOnline: true),
                     Wingman(image: #imageLiteral(resourceName: "profile15"), firstName: "Peter", lastName: "Smith", job: "Photographer", location: "Azusa, CA", rating: 8.7, isOnline: false),
                     Wingman(image: #imageLiteral(resourceName: "profile16"), firstName: "Shantel", lastName: "Jones", job: "Baby Sitter", location: "Azusa, CA", rating: 9.2, isOnline: true),
-                    Wingman(image: #imageLiteral(resourceName: "profile17"), firstName: "Lucifer", lastName: "Arbel", job: "Mover", location: "Azusa, CA", rating: 9.3, isOnline: true),
+                    Wingman(image: #imageLiteral(resourceName: "profile17"), firstName: "Keelan", lastName: "Palama", job: "Mover", location: "Azusa, CA", rating: 9.3, isOnline: true),
                     Wingman(image: #imageLiteral(resourceName: "profile18"), firstName: "Johnathan", lastName: "Wilkes", job: "Mover", location: "Azusa, CA", rating: 8.4, isOnline: true),
                     Wingman(image: #imageLiteral(resourceName: "profile19"), firstName: "Kevin", lastName: "Spacey", job: "Photographer", location: "Azusa, CA", rating: 7.9, isOnline: true),
                     Wingman(image: #imageLiteral(resourceName: "profile20"), firstName: "Water'mallon", lastName: "L'Dasha", job: "Tutor", location: "Azusa, CA", rating: 8.6, isOnline: true)]
