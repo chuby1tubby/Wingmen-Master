@@ -20,6 +20,10 @@
 		BF72504C1DB86FD200CDE686 /* RoundedCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72504B1DB86FD200CDE686 /* RoundedCornersView.swift */; };
 		BF7779FF1DB076FF0087EBE8 /* InitializedWingmen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7779FE1DB076FF0087EBE8 /* InitializedWingmen.swift */; };
 		BF7BF02D1DACAE3B0041624B /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */; };
+		BF81B5A51DBA060F00D782D4 /* RecentListingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF81B5A41DBA060F00D782D4 /* RecentListingsVC.swift */; };
+		BF81B5A71DBA06A900D782D4 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF81B5A61DBA06A900D782D4 /* CircleView.swift */; };
+		BF81B5A91DBA11AD00D782D4 /* RecentJobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF81B5A81DBA11AD00D782D4 /* RecentJobCell.swift */; };
+		BF81B5AB1DBA192100D782D4 /* Rounded10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF81B5AA1DBA192100D782D4 /* Rounded10View.swift */; };
 		BFB1E4781DAF097500A3AB88 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1E4771DAF097500A3AB88 /* CircleImage.swift */; };
 		BFB665341DADC5C40073786C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB665331DADC5C40073786C /* ProfileVC.swift */; };
 		BFC876F31DAB609300B35E3B /* ProfilesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC876F21DAB609300B35E3B /* ProfilesListVC.swift */; };
@@ -69,6 +73,10 @@
 		BF72504B1DB86FD200CDE686 /* RoundedCornersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
 		BF7779FE1DB076FF0087EBE8 /* InitializedWingmen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitializedWingmen.swift; sourceTree = "<group>"; };
 		BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		BF81B5A41DBA060F00D782D4 /* RecentListingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentListingsVC.swift; sourceTree = "<group>"; };
+		BF81B5A61DBA06A900D782D4 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		BF81B5A81DBA11AD00D782D4 /* RecentJobCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentJobCell.swift; sourceTree = "<group>"; };
+		BF81B5AA1DBA192100D782D4 /* Rounded10View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rounded10View.swift; sourceTree = "<group>"; };
 		BFB1E4771DAF097500A3AB88 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		BFB665331DADC5C40073786C /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		BFC876F21DAB609300B35E3B /* ProfilesListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesListVC.swift; sourceTree = "<group>"; };
@@ -169,6 +177,7 @@
 				BFE1FC751DAC5E0500472219 /* MapVC.swift */,
 				BFE1FC731DAC5DA300472219 /* AccountVC.swift */,
 				BFFFB8221DB86827009D8E17 /* testAccountVC.swift */,
+				BF81B5A41DBA060F00D782D4 /* RecentListingsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -186,11 +195,14 @@
 		BFC876F01DAB600800B35E3B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF81B5A81DBA11AD00D782D4 /* RecentJobCell.swift */,
 				BF1AC5D71DAD69C500B199BC /* CategoryCell.swift */,
 				BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */,
 				BF45622C1DADF21E00DE7D19 /* RoundedImage.swift */,
 				BFB1E4771DAF097500A3AB88 /* CircleImage.swift */,
 				BF72504B1DB86FD200CDE686 /* RoundedCornersView.swift */,
+				BF81B5A61DBA06A900D782D4 /* CircleView.swift */,
+				BF81B5AA1DBA192100D782D4 /* Rounded10View.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -347,6 +359,7 @@
 				BFE1FC741DAC5DA300472219 /* AccountVC.swift in Sources */,
 				BFC876F31DAB609300B35E3B /* ProfilesListVC.swift in Sources */,
 				BFB1E4781DAF097500A3AB88 /* CircleImage.swift in Sources */,
+				BF81B5A51DBA060F00D782D4 /* RecentListingsVC.swift in Sources */,
 				BF72504C1DB86FD200CDE686 /* RoundedCornersView.swift in Sources */,
 				BF08D36B1DA5B035006110EA /* SearchVC.swift in Sources */,
 				BFF2777A1DAD92C400032E28 /* Pin.swift in Sources */,
@@ -356,10 +369,13 @@
 				BF56B7B81DAD614500EC50B1 /* SocialMediaLoginVC.swift in Sources */,
 				BF08D3691DA5B035006110EA /* AppDelegate.swift in Sources */,
 				BF45622D1DADF21E00DE7D19 /* RoundedImage.swift in Sources */,
+				BF81B5A91DBA11AD00D782D4 /* RecentJobCell.swift in Sources */,
 				BFF446CA1DB02D0700E97251 /* Wingman.swift in Sources */,
+				BF81B5A71DBA06A900D782D4 /* CircleView.swift in Sources */,
 				BFB665341DADC5C40073786C /* ProfileVC.swift in Sources */,
 				BF7779FF1DB076FF0087EBE8 /* InitializedWingmen.swift in Sources */,
 				BFE1FC761DAC5E0500472219 /* MapVC.swift in Sources */,
+				BF81B5AB1DBA192100D782D4 /* Rounded10View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

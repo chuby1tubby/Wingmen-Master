@@ -61,9 +61,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     // Actions
     @IBAction func onSignInPressed(_ sender: Any) {
         if (usernameField.text?.lowercased().contains("wingmenllc"))! {
-            // Do Wingman segue
-            performSegue(withIdentifier: "wingmenSignInSegue", sender: self)
-            isSignedInAsWingman = true
+//            // Do Wingman segue
+//            performSegue(withIdentifier: "wingmenSignInSegue", sender: self)
+//            isSignedInAsWingman = true
         } else {
             // Do Regular segue
             performSegue(withIdentifier: "regularSignInSegue", sender: self)
