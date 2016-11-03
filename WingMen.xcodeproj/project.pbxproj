@@ -17,7 +17,10 @@
 		BF1AC5D81DAD69C500B199BC /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AC5D71DAD69C500B199BC /* CategoryCell.swift */; };
 		BF45622D1DADF21E00DE7D19 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45622C1DADF21E00DE7D19 /* RoundedImage.swift */; };
 		BF56B7B81DAD614500EC50B1 /* SocialMediaLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56B7B71DAD614500EC50B1 /* SocialMediaLoginVC.swift */; };
+		BF574B6C1DBDA41A00E379F3 /* RealCircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF574B6B1DBDA41A00E379F3 /* RealCircleImage.swift */; };
 		BF72504C1DB86FD200CDE686 /* RoundedCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72504B1DB86FD200CDE686 /* RoundedCornersView.swift */; };
+		BF7699F11DBFF17100E39011 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7699F01DBFF17100E39011 /* CollectionViewCell.swift */; };
+		BF7699F51DBFFAA500E39011 /* CollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7699F41DBFFAA500E39011 /* CollectionViewVC.swift */; };
 		BF7779FF1DB076FF0087EBE8 /* InitializedWingmen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7779FE1DB076FF0087EBE8 /* InitializedWingmen.swift */; };
 		BF7BF02D1DACAE3B0041624B /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */; };
 		BF81B5A51DBA060F00D782D4 /* RecentListingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF81B5A41DBA060F00D782D4 /* RecentListingsVC.swift */; };
@@ -70,7 +73,10 @@
 		BF1AC5D71DAD69C500B199BC /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		BF45622C1DADF21E00DE7D19 /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		BF56B7B71DAD614500EC50B1 /* SocialMediaLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaLoginVC.swift; sourceTree = "<group>"; };
+		BF574B6B1DBDA41A00E379F3 /* RealCircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealCircleImage.swift; sourceTree = "<group>"; };
 		BF72504B1DB86FD200CDE686 /* RoundedCornersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
+		BF7699F01DBFF17100E39011 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		BF7699F41DBFFAA500E39011 /* CollectionViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewVC.swift; sourceTree = "<group>"; };
 		BF7779FE1DB076FF0087EBE8 /* InitializedWingmen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitializedWingmen.swift; sourceTree = "<group>"; };
 		BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		BF81B5A41DBA060F00D782D4 /* RecentListingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentListingsVC.swift; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 				BFE1FC731DAC5DA300472219 /* AccountVC.swift */,
 				BFFFB8221DB86827009D8E17 /* testAccountVC.swift */,
 				BF81B5A41DBA060F00D782D4 /* RecentListingsVC.swift */,
+				BF7699F41DBFFAA500E39011 /* CollectionViewVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -195,6 +202,7 @@
 		BFC876F01DAB600800B35E3B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF7699F01DBFF17100E39011 /* CollectionViewCell.swift */,
 				BF81B5A81DBA11AD00D782D4 /* RecentJobCell.swift */,
 				BF1AC5D71DAD69C500B199BC /* CategoryCell.swift */,
 				BF7BF02C1DACAE3B0041624B /* ProfileCell.swift */,
@@ -203,6 +211,7 @@
 				BF72504B1DB86FD200CDE686 /* RoundedCornersView.swift */,
 				BF81B5A61DBA06A900D782D4 /* CircleView.swift */,
 				BF81B5AA1DBA192100D782D4 /* Rounded10View.swift */,
+				BF574B6B1DBDA41A00E379F3 /* RealCircleImage.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -359,10 +368,13 @@
 				BFE1FC741DAC5DA300472219 /* AccountVC.swift in Sources */,
 				BFC876F31DAB609300B35E3B /* ProfilesListVC.swift in Sources */,
 				BFB1E4781DAF097500A3AB88 /* CircleImage.swift in Sources */,
+				BF7699F11DBFF17100E39011 /* CollectionViewCell.swift in Sources */,
 				BF81B5A51DBA060F00D782D4 /* RecentListingsVC.swift in Sources */,
 				BF72504C1DB86FD200CDE686 /* RoundedCornersView.swift in Sources */,
 				BF08D36B1DA5B035006110EA /* SearchVC.swift in Sources */,
+				BF7699F51DBFFAA500E39011 /* CollectionViewVC.swift in Sources */,
 				BFF2777A1DAD92C400032E28 /* Pin.swift in Sources */,
+				BF574B6C1DBDA41A00E379F3 /* RealCircleImage.swift in Sources */,
 				BFC876F51DAB770B00B35E3B /* LoginVC.swift in Sources */,
 				BF1AC5D81DAD69C500B199BC /* CategoryCell.swift in Sources */,
 				BFF446C81DB02C0800E97251 /* UserBioText.swift in Sources */,

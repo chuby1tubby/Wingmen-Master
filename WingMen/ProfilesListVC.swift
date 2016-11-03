@@ -106,5 +106,9 @@ class ProfilesListVC: UIViewController, UITableViewDataSource, UITableViewDelega
             return myCount
         }
     }
+    @IBAction func onBackgroundTapped(_ sender: Any) {
+        view.endEditing(true)
+        searchBar.resignFirstResponder()
+    }
 }
 

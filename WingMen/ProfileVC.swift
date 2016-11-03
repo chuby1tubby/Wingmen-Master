@@ -14,7 +14,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var userImage: RoundedImage!
     @IBOutlet weak var userNameTitle: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var userJobTitleLbl: UILabel!
+//    @IBOutlet weak var userJobTitleLbl: UILabel!
     @IBOutlet weak var userRatingLbl: UILabel!
     @IBOutlet weak var aboutUserLbl: UILabel!
     @IBOutlet weak var bioTxtBox: UITextView!
@@ -24,11 +24,14 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize.height = 1000
+        scrollView.contentSize.height = 850
         userImage.image = userImg
+        if userImg == #imageLiteral(resourceName: "profile1") {
+            userImage.image = #imageLiteral(resourceName: "profile1Blurred")
+        }
         userNameTitle.text = userName
         userNameLabel.text = userName
-        userJobTitleLbl.text = userJob
+//        userJobTitleLbl.text = userJob
         userRatingLbl.text = "\(userRating!)"
         aboutUserLbl.text = "About \(userFirstName!):"
         setStarImages()

@@ -23,10 +23,10 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     var inSearchMode = false
     
     var jobsArray = ["Any Wingman", "Baby Sitter", "Graphic Designer", "Mover", "Photographer", "Tax Accounting", "Tutor"]
+    let categoryImagesArray = [#imageLiteral(resourceName: "icon_wing"), #imageLiteral(resourceName: "category_babySitter"), #imageLiteral(resourceName: "category_garphicDesigner"), #imageLiteral(resourceName: "category_mover"), #imageLiteral(resourceName: "category_photography"), #imageLiteral(resourceName: "category_accounting"), #imageLiteral(resourceName: "category_tutor")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
@@ -76,9 +76,6 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         view.endEditing(true)
     }
     
-    
-    
-    
     // Table view functions
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if inSearchMode {
@@ -103,7 +100,8 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             } else {
                 job = jobsArray[indexPath.row]
             }
-            cell.configureCell(job)
+            let image = categoryImagesArray[indexPath.row]
+            cell.configureCell(job, img: image)
             return cell
         } else {
             return CategoryCell()
@@ -118,5 +116,9 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         } else {
             return jobsArray.count
         }
+    }
+    @IBAction func backGroundTapped(_ sender: Any) {
+        view.endEditing(true)
+        searchBar.resignFirstResponder()
     }
 }

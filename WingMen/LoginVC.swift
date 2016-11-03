@@ -70,6 +70,11 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             isSignedInAsWingman = false
         }
     }
+    @IBAction func onBackgroundTapped(_ sender: Any) {
+        view.endEditing(true)
+        usernameField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+    }
     @IBAction func facebookRecognizer(_ sender: AnyObject) {
         socialMediaSelection = "Facebook Login Screen"
         performSegue(withIdentifier: "mediaSegue", sender: self)

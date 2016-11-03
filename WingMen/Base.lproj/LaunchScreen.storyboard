@@ -24,16 +24,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1o-wa-qQR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="yC2-Xj-Pgo">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wingmenLogoText" translatesAutoresizingMaskIntoConstraints="NO" id="otz-lX-NSb">
+                                        <rect key="frame" x="67" y="213" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="ZJa-Nq-ywI"/>
+                                            <constraint firstAttribute="height" constant="240" id="yXj-xz-V1D"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.1176470588" green="0.12941176469999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="yC2-Xj-Pgo" firstAttribute="top" secondItem="y1o-wa-qQR" secondAttribute="top" id="0Ik-f1-2pi"/>
-                                    <constraint firstAttribute="trailing" secondItem="yC2-Xj-Pgo" secondAttribute="trailing" id="ByN-uv-x6K"/>
-                                    <constraint firstItem="yC2-Xj-Pgo" firstAttribute="leading" secondItem="y1o-wa-qQR" secondAttribute="leading" id="NWv-lB-mio"/>
-                                    <constraint firstAttribute="bottom" secondItem="yC2-Xj-Pgo" secondAttribute="bottom" id="ObG-3C-zyM"/>
+                                    <constraint firstItem="otz-lX-NSb" firstAttribute="centerY" secondItem="y1o-wa-qQR" secondAttribute="centerY" id="Qsw-ft-Isa"/>
+                                    <constraint firstItem="otz-lX-NSb" firstAttribute="centerX" secondItem="y1o-wa-qQR" secondAttribute="centerX" id="Sjs-aD-Qtj"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -52,6 +54,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchScreenImage" width="3125" height="5558"/>
+        <image name="wingmenLogoText" width="861" height="1304"/>
     </resources>
 </document>

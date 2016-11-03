@@ -16,6 +16,8 @@ class RecentJobCell: UITableViewCell {
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var hoursAgoLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet weak var commentIcon: UIImageView!
+    @IBOutlet weak var shareIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,7 +34,7 @@ class RecentJobCell: UITableViewCell {
         nameLbl.text = nameTxt
         jobLbl.text = jobTxt
         locationLbl.text = locationTxt
-        hoursAgoLbl.text = "\(hoursAgo)"
-        descriptionLbl.text = "I need a photographer who can take my portrait for a LinkedIn profile picture. Must have a good camera!"
+        hoursAgoLbl.text = "\(hoursAgo) hours ago"
+        descriptionLbl.text = "I need a photographer who can take my portrait for a LinkedIn profile picture. \nMust have a good camera!"
     }
 }

@@ -18,8 +18,8 @@ class CategoryCell: UITableViewCell {
         // Initialization code
     }
     
-    func configureCell(_ jobTxt: String) {
-        //mainImg.image = image
+    func configureCell(_ jobTxt: String, img: UIImage) {
+        mainImg.image = img
         jobLbl.text = jobTxt
     }
 }
