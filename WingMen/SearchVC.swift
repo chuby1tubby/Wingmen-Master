@@ -93,7 +93,6 @@ class SearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "JobCategoryCell") as? CategoryCell {
-            //img = imagesArray[indexPath.row]  // Caleb needs to design new images
             let job: String!
             if inSearchMode {
                 job = filteredJobs[indexPath.row]
