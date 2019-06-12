@@ -7,4 +7,7 @@ target 'WingMen' do
 
   # Pods for WingMen
   pod 'Firebase'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
 end

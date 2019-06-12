@@ -7,6 +7,7 @@
 //
 
 import XCTest
+
 @testable import WingMen
 
 class WingMenTests: XCTestCase {

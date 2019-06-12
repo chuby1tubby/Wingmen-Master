@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseMessaging
+import FirebaseInstanceID
+import FirebaseDatabase
+import FirebaseAuth
 
 // Global Variables
 var isSignedInAsWingman: Bool = false
@@ -18,10 +23,16 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordField: UITextField!
     
     // Variables
+    var ref: FIRDatabaseReference!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Firebase setup
+        FIRMessaging.messaging().subscribe(toTopic: "/topics/news/")
+        ref = FIRDatabase.database().reference()
+        
         usernameField.delegate = self
         passwordField.delegate = self
         
@@ -57,19 +68,32 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    func isValidSyntax(testStr:String) -> Bool {
+        // print("validate calendar: \(testStr)")
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+    }
     
     // Actions
     @IBAction func onSignInPressed(_ sender: Any) {
-        if (usernameField.text?.lowercased().contains("wingmenllc"))! {
-//            // Do Wingman segue
-//            performSegue(withIdentifier: "wingmenSignInSegue", sender: self)
-//            isSignedInAsWingman = true
+        var isValidLogin: Bool = false
+        if isValidSyntax(testStr: usernameField.text!) == true {
+            FIRAuth.auth()?.signIn(withEmail: usernameField.text!, password: passwordField.text!) { (user, error) in
+                isValidLogin = true
+                print("Login Successful!")
+                self.performMySignInSegue()
+            }
         } else {
-            // Do Regular segue
-            performSegue(withIdentifier: "regularSignInSegue", sender: self)
-            isSignedInAsWingman = false
+            print("Please enter a valid email address.")
         }
     }
+    
+    func performMySignInSegue() {
+        performSegue(withIdentifier: "regularSignInSegue", sender: self)
+    }
+    
     @IBAction func onBackgroundTapped(_ sender: Any) {
         view.endEditing(true)
         usernameField.resignFirstResponder()
